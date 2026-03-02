@@ -1,32 +1,36 @@
-# Performance Labs MVP v1
+# Performance Labs MVP v2
 
-Base inicial para publicar la landing del MVP en GitHub Pages, manteniendo el blog en `/blog/`.
+## Archivos que debes cambiar en tu repositorio
 
-## Estructura
+1. `index.html`
+2. `styles.css`
+3. `app.js`
+4. `404.html` (opcional, si ya tienes uno funcional puedes dejar el anterior)
 
-- `index.html` → landing principal del MVP
-- `styles.css` → estilos visuales
-- `app.js` → interacciones simples
-- `404.html` → página de error opcional
+## Qué cambia esta versión
 
-## Cómo publicarlo
+- Title SEO optimizado
+- Meta description persuasiva y amable
+- Hero con CTA claro
+- Selector para dos públicos: atletas y centros deportivos
+- CTA dinámico según el público seleccionado
+- Secciones listas para MVP con modelo de suscripción
 
-1. Abrí tu repo de GitHub Pages.
-2. En la raíz del repo, subí `index.html`, `styles.css`, `app.js` y `404.html`.
-3. Dejá tu carpeta del blog tal como está en `/blog/`.
-4. Hacé commit.
-5. En GitHub: **Settings > Pages**.
-6. En **Build and deployment**, elegí:
-   - **Source:** Deploy from a branch
-   - **Branch:** `main`
-   - **Folder:** `/root`
-7. Guardá y esperá a que GitHub publique.
-8. Tu landing quedará en la raíz del sitio y el blog seguirá en `/blog/`.
+## Title recomendado
 
-## Qué cambiar primero
+`Performance Labs | Datos que impulsan tu rendimiento deportivo`
 
-- Reemplazar el mail de CTA.
-- Ajustar textos del MVP con tu propuesta exacta.
-- Conectar formulario real de contacto.
-- Agregar capturas reales del dashboard.
-- Si usás dominio propio, agregar `CNAME`.
+## Meta description recomendada
+
+`Performance Labs ayuda a atletas y centros deportivos a transformar datos de entrenamiento en decisiones claras mediante dashboards, reportes e insights accionables.`
+
+## CTA principal recomendado
+
+- Texto por defecto: `Quiero una demo`
+- Texto para centros: `Solicitar demo para mi centro`
+
+## Publicación
+
+Sube estos archivos al repositorio del MVP y verifica en GitHub Pages que el dominio personalizado sea:
+
+`mvp.performancelabs.tech`
