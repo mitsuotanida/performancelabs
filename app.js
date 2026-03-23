@@ -1,92 +1,179 @@
-const siteLinks = {
-  feedbackFormUrl: 'https://forms.gle/REEMPLAZAR_CON_TU_LINK',
-  athleteDemoMail: 'mailto:hola@performancelabs.tech?subject=Quiero%20una%20demo%20de%20Performance%20Labs%20para%20atletas',
-  centerDemoMail: 'mailto:hola@performancelabs.tech?subject=Quiero%20una%20demo%20de%20Performance%20Labs%20para%20mi%20centro%20deportivo'
-}; // Este objeto guarda los links importantes del sitio. Sirve para cambiar el formulario o los correos en un solo lugar sin tocar muchas líneas.
+// Performance Labs — Web v5.1
+// (Explicación simple: este archivo decide a qué formulario ir según el segmento: Atleta o Centro.)
 
-const audienceContent = {
-  athlete: {
-    title: 'Datos que impulsan tu rendimiento deportivo',
-    description: 'Performance Labs transforma datos deportivos en decisiones claras y útiles para mejorar el rendimiento. Ayudamos a atletas a monitorear su progreso, entender sus entrenamientos y descubrir oportunidades reales de mejora con una experiencia visual, simple y profesional.',
-    items: [
-      'Visualiza tu progreso con claridad.',
-      'Identifica patrones, fortalezas y alertas.',
-      'Entrena con decisiones basadas en datos.'
-    ],
-    panelTitle: 'Panel de atleta',
-    panelInsight: 'Tus mejores bloques coinciden con sesiones de mayor regularidad y recuperación estable.',
-    ctaText: 'Quiero una demo',
-    ctaHref: siteLinks.athleteDemoMail
-  }, // Este objeto guarda el contenido para atletas. Ayuda a mostrar una versión enfocada en deportistas individuales.
-  center: {
-    title: 'Más visibilidad para gestionar mejor el rendimiento de tu centro deportivo',
-    description: 'Performance Labs ayuda a centros deportivos a ordenar sus datos, visualizar avances y tomar decisiones con más contexto. El MVP permite consolidar información relevante, comunicar resultados con claridad y detectar oportunidades de mejora en la operación y el entrenamiento.',
-    items: [
-      'Consolida información en un solo lugar.',
-      'Mejora el seguimiento de atletas y procesos.',
-      'Comunica resultados con una mirada más profesional.'
-    ],
-    panelTitle: 'Panel para centro deportivo',
-    panelInsight: 'El centro mejora visibilidad sobre asistencia, carga de entrenamiento y evolución por bloques o grupos.',
-    ctaText: 'Solicitar demo para mi centro',
-    ctaHref: siteLinks.centerDemoMail
-  } // Este objeto guarda el contenido para centros deportivos. Sirve para cambiar el enfoque comercial sin duplicar la página.
+const CONFIG = {
+  diagnosticFormAthleteUrl: "https://forms.gle/EBKLEueVeadbfQs58", // Link del formulario para atletas.
+  diagnosticFormCenterUrl: "https://forms.gle/Sb2u6RuwZ6XTGvu79", // Link del formulario para centros.
+  segments: {
+    athlete: {
+      title: "Atleta",
+      desc: "Lecturas semanales y mensuales para mejorar con método: carga, consistencia, técnica y progreso.",
+      promise: "Un diagnóstico que convierte tus entrenamientos en prioridades claras para la próxima semana.",
+      subs: {
+        swim: {
+          bullets: [
+            { icon: "≈", title: "Pace real y controlado", desc: "Pace por 100m calculado desde distancia y duración, con tendencia semanal." },
+            { icon: "↻", title: "Eficiencia técnica", desc: "Brazadas/100m y cadencia para mejorar sin aumentar carga innecesaria." },
+            { icon: "⚡", title: "Carga semanal", desc: "Lectura 7D/28D con semáforo de picos y próximos pasos." }
+          ],
+          mock: { panelTitle: "Vista previa — Atleta (Natación)", metricLabel: "Pace /100m", metricValue: "2:05", metricSub: "Eficiencia", conclusion: "“Conclusión semanal: progreso estable. Próximo foco: técnica con ritmo controlado.”" }
+        },
+        bike: {
+          bullets: [
+            { icon: "⛰", title: "Volumen y calidad", desc: "Horas y carga semanal para entender consistencia y recuperación." },
+            { icon: "♥", title: "Intensidad", desc: "Distribución de esfuerzo para evitar semanas engañosas." },
+            { icon: "⚠", title: "Gestión de picos", desc: "Semáforo de carga para sostener progreso sin sobrecarga." }
+          ],
+          mock: { panelTitle: "Vista previa — Atleta (Ciclismo)", metricLabel: "Horas 7D", metricValue: "6.3", metricSub: "Volumen", conclusion: "“Conclusión semanal: buen volumen. Próximo foco: sesión fácil para consolidar base.”" }
+        },
+        run: {
+          bullets: [
+            { icon: "⏱", title: "Ritmo y progresión", desc: "Tendencias 7D/28D para ver mejoras reales." },
+            { icon: "📈", title: "Consistencia", desc: "Sesiones por semana y estabilidad de carga." },
+            { icon: "🧠", title: "Siguiente acción", desc: "Recomendación simple: volumen, técnica o recuperación." }
+          ],
+          mock: { panelTitle: "Vista previa — Atleta (Running)", metricLabel: "Ritmo", metricValue: "5:05", metricSub: "Estable", conclusion: "“Conclusión semanal: semana sólida. Próximo foco: calidad bien medida.”" }
+        },
+        tri: {
+          bullets: [
+            { icon: "🧩", title: "Balance por disciplina", desc: "Distribución semanal para evitar desequilibrios." },
+            { icon: "⚡", title: "Carga total", desc: "Lectura de carga que prioriza recuperación a tiempo." },
+            { icon: "🗓", title: "Priorización", desc: "Acción sugerida para la siguiente semana según objetivos." }
+          ],
+          mock: { panelTitle: "Vista previa — Atleta (Triatlón)", metricLabel: "Balance", metricValue: "3/2/2", metricSub: "Swim/Bike/Run", conclusion: "“Conclusión semanal: balance adecuado. Próximo foco: ajustar intensidad para evitar picos.”" }
+        }
+      }
+    },
+    center: {
+      title: "Centro deportivo",
+      desc: "Gestión por atleta y disciplina: indicadores de adherencia, progreso y consistencia para coaches y dirección.",
+      promise: "Un diagnóstico que ordena datos, segmentación y reportería para operación y retención.",
+      bullets: [
+        { icon: "👥", title: "Filtros por atleta y deporte", desc: "Selecciona atleta y disciplina para ver estadísticas y tendencias." },
+        { icon: "🧾", title: "Reportes por coach", desc: "Entregables periódicos para seguimiento y comunicación." },
+        { icon: "🧲", title: "Adherencia y retención", desc: "Alertas tempranas: quién baja carga, quién se ausenta y cómo intervenir." }
+      ],
+      mock: { panelTitle: "Vista previa — Centro (Filtros)", metricLabel: "Adherencia", metricValue: "84%", metricSub: "Semanal", conclusion: "“Resumen semanal: adherencia alta. Próximo foco: reactivar el grupo rezagado.”" }
+    }
+  }
 };
 
-const audienceButtons = document.querySelectorAll('[data-audience]');
-const heroTitle = document.getElementById('heroTitle');
-const heroDescription = document.getElementById('heroDescription');
-const heroList = document.getElementById('heroList');
-const panelTitle = document.getElementById('panelTitle');
-const panelInsight = document.getElementById('panelInsight');
-const primaryCta = document.getElementById('primaryCta');
-const footerCta = document.getElementById('footerCta');
-const feedbackHeroCta = document.getElementById('feedbackHeroCta');
-const feedbackSectionCta = document.getElementById('feedbackSectionCta');
-const feedbackFooterCta = document.getElementById('feedbackFooterCta');
+function $(s){ return document.querySelector(s); }
+function $all(s){ return Array.from(document.querySelectorAll(s)); }
 
-function paintFeedbackLinks() {
-  [feedbackHeroCta, feedbackSectionCta, feedbackFooterCta].forEach((linkElement) => {
-    if (!linkElement) {
-      return;
-    }
+const state = { seg: "athlete", sub: "swim" };
 
-    linkElement.href = siteLinks.feedbackFormUrl;
+function currentDiagUrl(){
+  return state.seg === "center" ? CONFIG.diagnosticFormCenterUrl : CONFIG.diagnosticFormAthleteUrl;
+} // Elige el formulario correcto según segmento.
+
+function setDiagLinks(){
+  const url = currentDiagUrl();
+  const ids = ["#btnPrimaryDiag","#btnDiagTop","#btnDiagMid","#btnDiagBottom","#btnDiagPlan","#btnDiagPlan2","#btnDiagPlan3","#footerDiag"];
+  ids.forEach(id => { const el = $(id); if(el) el.href = url; });
+} // Aplica el link a todos los botones.
+
+function renderBullets(list){
+  const wrap = $("#segBullets");
+  wrap.innerHTML = "";
+  list.forEach(b => {
+    const el = document.createElement("div");
+    el.className = "bullet";
+    el.innerHTML = `
+      <div class="bullet__icon" aria-hidden="true">${b.icon}</div>
+      <div>
+        <div class="bullet__title">${b.title}</div>
+        <div class="bullet__desc">${b.desc}</div>
+      </div>
+    `;
+    wrap.appendChild(el);
   });
-} // Esta función pone el mismo link de Google Forms en todos los botones de feedback. Así evitás errores y mantenés todo ordenado.
+} // Dibuja viñetas.
 
-function renderAudience(audienceKey) {
-  const selectedAudience = audienceContent[audienceKey];
+function setMock(mock){
+  $("#panelTitle").textContent = mock.panelTitle || "Vista previa";
+  $("#mockMetricLabel").textContent = mock.metricLabel;
+  $("#mockMetricValue").textContent = mock.metricValue;
+  $("#mockMetricSub").textContent = mock.metricSub;
+  $("#mockConclusion").textContent = mock.conclusion;
 
-  if (!selectedAudience) {
-    return;
+  const loadValue = (state.seg === "center") ? "1.04" : "1.12";
+  $("#mockLoad").textContent = loadValue;
+  $("#mockLoadSub").textContent = (parseFloat(loadValue) > 1.3) ? "Alta" : "Controlada";
+} // Actualiza vista previa.
+
+function setSubtabsVisible(v){
+  const el = $("#athleteSubtabs");
+  if(el) el.style.display = v ? "flex" : "none";
+} // Muestra/oculta subtabs.
+
+function setActiveButtons(){
+  $all(".seg__tab").forEach(btn => {
+    const a = btn.dataset.seg === state.seg;
+    btn.classList.toggle("is-active", a);
+    btn.setAttribute("aria-selected", a ? "true" : "false");
+  });
+  $all(".subtab").forEach(btn => {
+    const a = btn.dataset.sub === state.sub;
+    btn.classList.toggle("is-active", a);
+    btn.setAttribute("aria-selected", a ? "true" : "false");
+  });
+} // Marca botones activos.
+
+function render(){
+  if(state.seg === "athlete"){
+    const seg = CONFIG.segments.athlete;
+    $("#segTitle").textContent = seg.title;
+    $("#segDesc").textContent = seg.desc;
+    $("#segPromise").textContent = seg.promise;
+    setSubtabsVisible(true);
+
+    const sub = seg.subs[state.sub] || seg.subs.swim;
+    renderBullets(sub.bullets);
+    setMock(sub.mock);
+
+    $("#card1Title").textContent = "KPIs por disciplina";
+    $("#card1Desc").textContent = "Métricas clave, mejores marcas y tendencias 7D/28D.";
+    $("#card2Title").textContent = "Carga y consistencia";
+    $("#card2Desc").textContent = "Semáforo de carga y acciones sugeridas para evitar picos.";
+    $("#card3Title").textContent = "Reporte PDF premium";
+    $("#card3Desc").textContent = "Listo para compartir, con conclusiones y próximos pasos.";
+  } else {
+    const seg = CONFIG.segments.center;
+    $("#segTitle").textContent = seg.title;
+    $("#segDesc").textContent = seg.desc;
+    $("#segPromise").textContent = seg.promise;
+    setSubtabsVisible(false);
+
+    renderBullets(seg.bullets);
+    setMock(seg.mock);
+
+    $("#card1Title").textContent = "Panel por atleta y deporte";
+    $("#card1Desc").textContent = "Filtros de atleta y disciplina, con métricas operativas claras.";
+    $("#card2Title").textContent = "Gestión por coach y grupos";
+    $("#card2Desc").textContent = "Seguimiento por cohorte, reportes y comunicación.";
+    $("#card3Title").textContent = "Reporte PDF premium";
+    $("#card3Desc").textContent = "Resumen gerencial y reportes por grupo según plan.";
   }
+  setActiveButtons();
+  setDiagLinks();
+} // Renderiza y actualiza el link del botón.
 
-  heroTitle.textContent = selectedAudience.title;
-  heroDescription.textContent = selectedAudience.description;
-  panelTitle.textContent = selectedAudience.panelTitle;
-  panelInsight.textContent = selectedAudience.panelInsight;
-  primaryCta.textContent = selectedAudience.ctaText;
-  primaryCta.href = selectedAudience.ctaHref;
-  footerCta.textContent = selectedAudience.ctaText;
-  footerCta.href = selectedAudience.ctaHref;
+function wire(){
+  $all(".seg__tab").forEach(btn => btn.addEventListener("click", () => {
+    state.seg = btn.dataset.seg;
+    render();
+  }));
+  $all(".subtab").forEach(btn => btn.addEventListener("click", () => {
+    state.sub = btn.dataset.sub;
+    render();
+  }));
+} // Conecta los clicks.
 
-  heroList.innerHTML = selectedAudience.items
-    .map((item) => `<li>${item}</li>`)
-    .join('');
+function init(){
+  $("#year").textContent = String(new Date().getFullYear());
+  wire();
+  render();
+} // Inicializa todo.
 
-  audienceButtons.forEach((button) => {
-    const isActive = button.dataset.audience === audienceKey;
-    button.classList.toggle('is-active', isActive);
-    button.setAttribute('aria-selected', String(isActive));
-  });
-} // Esta función cambia textos y botones según el público elegido. Es como cambiar el cartel de la vidriera sin rehacer toda la tienda.
-
-audienceButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    renderAudience(button.dataset.audience);
-  });
-});
-
-paintFeedbackLinks();
-renderAudience('athlete');
+init();

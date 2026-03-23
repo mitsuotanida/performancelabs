@@ -1,250 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Performance Labs | Datos que impulsan tu rendimiento deportivo</title>
-  <meta name="title" content="Performance Labs | Datos que impulsan tu rendimiento deportivo">
-  <meta name="description" content="Performance Labs ayuda a atletas y centros deportivos a transformar datos de entrenamiento en decisiones claras mediante dashboards, reportes e insights accionables.">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0b1020">
-  <link rel="canonical" href="https://mvp.performancelabs.tech/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mvp.performancelabs.tech/">
-  <meta property="og:title" content="Performance Labs | Datos que impulsan tu rendimiento deportivo">
-  <meta property="og:description" content="Convierte datos deportivos en decisiones claras. Dashboards e insights para atletas y centros deportivos.">
-  <meta property="og:site_name" content="Performance Labs">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Performance Labs | Datos que impulsan tu rendimiento deportivo">
-  <meta name="twitter:description" content="Dashboards, análisis e insights para entrenar con más inteligencia y mejorar el rendimiento deportivo.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Performance Labs | Diagnóstico y reportes premium de rendimiento</title>
+  <meta name="description" content="Performance Labs transforma datos de entrenamiento en decisiones claras. Diagnóstico inicial, reportería y seguimiento por suscripción para atletas y centros deportivos." />
+  <meta name="theme-color" content="#0B1220" />
+  <meta property="og:title" content="Performance Labs | Diagnóstico y reportes premium" />
+  <meta property="og:description" content="Datos → claridad → decisiones. Soluciones para atletas y centros deportivos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/og-card.png" />
+  <meta property="og:locale" content="es_CL" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <div class="container topbar__inner">
-        <a class="brand" href="#inicio" aria-label="Ir al inicio de Performance Labs">
-          <span class="brand__mark">PL</span>
-          <span class="brand__text">Performance Labs</span>
-        </a>
+  <a class="skip" href="#main">Saltar al contenido</a>
 
-        <nav class="nav" aria-label="Navegación principal">
-          <a href="#solucion">Solución</a>
-          <a href="#como-funciona">Cómo funciona</a>
-          <a href="#planes">Suscripción</a>
-          <a href="#feedback">Feedback</a>
-        </nav>
-
-        <a class="button button--ghost button--small" href="#demo">Solicitar demo</a>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <img class="brand__mark" src="./assets/mark.svg" alt="" aria-hidden="true" />
+        <div class="brand__text">
+          <div class="brand__name">Performance Labs</div>
+          <div class="brand__tag">Diagnóstico, reportería y seguimiento</div>
+        </div>
       </div>
-    </header>
 
-    <main>
-      <section id="inicio" class="hero">
-        <div class="container hero__grid">
-          <div class="hero__content">
-            <p class="eyebrow">MVP de analítica deportiva por suscripción</p>
-            <h1 id="heroTitle">Datos que impulsan tu rendimiento deportivo</h1>
-            <p id="heroDescription" class="hero__description">
-              Performance Labs transforma datos deportivos en decisiones claras y útiles para mejorar el rendimiento. Ayudamos a atletas y centros deportivos a monitorear su progreso, entender sus entrenamientos y descubrir oportunidades reales de mejora con una experiencia visual, simple y profesional.
-            </p>
+      <nav class="nav">
+        <a href="#solucion">Solución</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#planes">Planes</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="pill" id="btnDiagTop" href="#" rel="noopener">Solicitar diagnóstico</a>
+      </nav>
+    </div>
+  </header>
 
-            <div class="audience-switch" role="tablist" aria-label="Seleccionar público objetivo">
-              <button class="audience-switch__button is-active" type="button" data-audience="athlete" aria-selected="true">Atletas</button>
-              <button class="audience-switch__button" type="button" data-audience="center" aria-selected="false">Centros deportivos</button>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="badge">Datos que se convierten en decisiones</div>
+          <h1>Un diagnóstico que ordena el rendimiento y habilita mejoras reales</h1>
+          <p class="lead">
+            Convertimos datos de entrenamiento en <strong>lecturas claras</strong>, <strong>tendencias</strong> y <strong>acciones concretas</strong>.
+            Diseñado para <strong>atletas</strong> y <strong>centros deportivos</strong> que necesitan control, consistencia y resultados.
+          </p>
+
+          <div class="cta">
+            <a id="btnPrimaryDiag" class="btn btn--primary" href="#" rel="noopener">Solicitar diagnóstico</a>
+            <a class="btn btn--ghost" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+        </div>
+
+        <div class="hero__panel" aria-label="Vista previa del producto">
+          <div class="panel__top">
+            <div class="panel__title" id="panelTitle">Vista previa — Atleta</div>
+            <div class="panel__chips">
+              <span class="chip chip--on">7 días</span>
+              <span class="chip">4 semanas</span>
+              <span class="chip">Mejores marcas</span>
             </div>
-
-            <div class="hero__actions">
-              <a id="primaryCta" class="button button--primary" href="mailto:hola@performancelabs.tech?subject=Quiero%20una%20demo%20de%20Performance%20Labs%20para%20atletas">Quiero una demo</a>
-              <a class="button button--secondary" href="#como-funciona">Ver cómo funciona</a>
-              <a id="feedbackHeroCta" class="button button--ghost" href="https://forms.gle/REEMPLAZAR_CON_TU_LINK" target="_blank" rel="noreferrer">Responder encuesta</a>
-            </div>
-
-            <ul id="heroList" class="hero__list">
-              <li>Visualiza tu progreso con claridad.</li>
-              <li>Identifica patrones, fortalezas y alertas.</li>
-              <li>Entrena con decisiones basadas en datos.</li>
-            </ul>
           </div>
 
-          <aside class="hero__panel" aria-label="Vista previa del producto">
-            <div class="mockup-card mockup-card--main">
-              <div class="mockup-card__header">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+          <div class="panel__mock">
+            <div class="mock__row">
+              <div class="mock__card">
+                <div class="mock__label">Carga semanal</div>
+                <div class="mock__value" id="mockLoad">1.12</div>
+                <div class="mock__sub" id="mockLoadSub">Controlada</div>
               </div>
-              <div class="mockup-card__body">
-                <p class="mockup-card__label">Vista del MVP</p>
-                <h2 id="panelTitle">Panel de atleta</h2>
-                <div class="metric-row">
-                  <article class="metric-card">
-                    <span class="metric-card__label">Carga semanal</span>
-                    <strong>87%</strong>
-                    <small>vs. objetivo</small>
-                  </article>
-                  <article class="metric-card">
-                    <span class="metric-card__label">Consistencia</span>
-                    <strong>5/6</strong>
-                    <small>sesiones completadas</small>
-                  </article>
-                </div>
-                <div class="chart-placeholder">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="insight-box">
-                  <p class="insight-box__title">Insight destacado</p>
-                  <p id="panelInsight">Tus mejores bloques coinciden con sesiones de mayor regularidad y recuperación estable.</p>
-                </div>
+              <div class="mock__card">
+                <div class="mock__label" id="mockMetricLabel">Pace /100m</div>
+                <div class="mock__value" id="mockMetricValue">2:05</div>
+                <div class="mock__sub" id="mockMetricSub">Eficiencia</div>
               </div>
             </div>
-          </aside>
-        </div>
-      </section>
 
-      <section id="solucion" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Qué ofrece Performance Labs</p>
-            <h2>Una solución visual, accionable y fácil de usar</h2>
-            <p>El MVP está pensado para convertir datos de entrenamiento en información útil para actuar rápido, entender mejor el rendimiento y comunicar resultados con claridad.</p>
+            <div class="mock__insight" id="mockConclusion">
+              “Conclusión semanal: progreso estable. Próximo foco: técnica con ritmo controlado.”
+            </div>
           </div>
-
-          <div class="feature-grid">
-            <article class="feature-card">
-              <h3>Dashboards claros</h3>
-              <p>Visualizaciones limpias para entender el rendimiento sin perderse en tablas infinitas.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Insights accionables</h3>
-              <p>Hallazgos simples y directos para decidir mejor qué ajustar, mantener o reforzar.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Modelo por suscripción</h3>
-              <p>Acceso continuo al tablero, mejoras iterativas y una experiencia pensada para acompañar la evolución.</p>
-            </article>
+          <div class="panel__bottom">
+            <span class="muted">Lux Dark • #0B1220</span>
+            <span class="pill pill--soft">Accionable</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="como-funciona" class="section section--alt">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Cómo funciona</p>
-            <h2>Del dato bruto a una decisión más inteligente</h2>
-          </div>
-
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">01</span>
-              <h3>Conectamos los datos</h3>
-              <p>Tomamos información desde smartwatch, registros de entrenamiento o bases consolidadas del centro deportivo.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">02</span>
-              <h3>Transformamos la información</h3>
-              <p>Ordenamos métricas clave para que el panel muestre avances, patrones y alertas de forma entendible.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">03</span>
-              <h3>Entregamos visibilidad continua</h3>
-              <p>El usuario accede a un tablero pensado para monitorear rendimiento, progreso y oportunidades de mejora.</p>
-            </article>
-          </div>
+    <section id="solucion" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Solución, según tu contexto</h2>
+          <p class="muted">Entregamos claridad operativa: qué está pasando, por qué y qué hacer a continuación.</p>
         </div>
-      </section>
 
-      <section id="planes" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Suscripción</p>
-            <h2>Un modelo simple para empezar rápido</h2>
-            <p>La propuesta del MVP está diseñada para validar valor real, recoger feedback y evolucionar la experiencia con foco en resultados.</p>
+        <div class="seg">
+          <div class="seg__tabs" role="tablist" aria-label="Segmentos">
+            <button class="seg__tab is-active" role="tab" aria-selected="true" data-seg="athlete">Atleta</button>
+            <button class="seg__tab" role="tab" aria-selected="false" data-seg="center">Centro deportivo</button>
           </div>
 
-          <div class="pricing-grid">
-            <article class="price-card price-card--featured">
-              <p class="price-card__tag">MVP</p>
-              <h3>Suscripción mensual</h3>
-              <p class="price-card__text">Acceso al tablero, seguimiento visual del rendimiento y evolución iterativa del producto.</p>
-              <ul>
-                <li>Dashboard actualizado</li>
-                <li>Visualización profesional</li>
-                <li>Insights priorizados</li>
-                <li>Mejoras por feedback</li>
-              </ul>
-              <a class="button button--primary button--full" href="#demo">Quiero probarlo</a>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div class="seg__body">
+            <div class="seg__copy">
+              <h3 id="segTitle">Atleta</h3>
+              <p id="segDesc" class="lead-sm"></p>
 
-      <section id="feedback" class="section section--alt">
-        <div class="container feedback-grid">
-          <div>
-            <p class="eyebrow">Feedback del MVP</p>
-            <h2>Ayudanos a mejorar con feedback real de uso</h2>
-            <p>Si ya probaste el MVP, contanos qué te resultó más útil, qué te confundió y qué te gustaría ver en la próxima versión. Esa información nos ayuda a priorizar mejoras que generen más valor.</p>
-          </div>
+              <div class="seg__subtabs" id="athleteSubtabs" aria-label="Disciplinas">
+                <button class="subtab is-active" data-sub="swim" aria-selected="true">Natación</button>
+                <button class="subtab" data-sub="bike" aria-selected="false">Ciclismo</button>
+                <button class="subtab" data-sub="run" aria-selected="false">Running</button>
+                <button class="subtab" data-sub="tri" aria-selected="false">Triatlón</button>
+              </div>
 
-          <div class="feedback-card">
-            <h3>Queremos saber tres cosas</h3>
-            <ul class="feedback-card__list">
-              <li>Qué tan claro fue el panel para vos.</li>
-              <li>Qué decisión te ayudó a tomar.</li>
-              <li>Qué te falta para querer usarlo de nuevo.</li>
-            </ul>
-            <div class="cta-banner__actions">
-              <a id="feedbackSectionCta" class="button button--primary" href="https://forms.gle/REEMPLAZAR_CON_TU_LINK" target="_blank" rel="noreferrer">Responder encuesta</a>
-              <a class="button button--secondary" href="#demo">Ver demo</a>
+              <div class="bullets" id="segBullets"></div>
+
+              <div class="cta cta--left">
+                <a id="btnDiagMid" class="btn btn--primary" href="#" rel="noopener">Solicitar diagnóstico</a>
+                <a class="btn btn--ghost" href="#planes">Ver planes</a>
+              </div>
+
+              <div class="note">
+                <div class="note__title">Lo central</div>
+                <div class="note__text" id="segPromise"></div>
+              </div>
+            </div>
+
+            <div class="seg__cards" aria-label="Entregables">
+              <div class="card">
+                <div class="card__kicker">Incluye</div>
+                <div class="card__title" id="card1Title"></div>
+                <div class="card__desc" id="card1Desc"></div>
+              </div>
+              <div class="card">
+                <div class="card__kicker">Incluye</div>
+                <div class="card__title" id="card2Title"></div>
+                <div class="card__desc" id="card2Desc"></div>
+              </div>
+              <div class="card">
+                <div class="card__kicker">Entregable</div>
+                <div class="card__title" id="card3Title"></div>
+                <div class="card__desc" id="card3Desc"></div>
+              </div>
+              <div class="card card--accent">
+                <div class="card__kicker">Para centros</div>
+                <div class="card__title">Gestión por atleta y deporte</div>
+                <div class="card__desc">Filtros por atleta y disciplina, con indicadores de adherencia y progreso.</div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="demo" class="section section--cta">
-        <div class="container cta-banner">
-          <div>
-            <p class="eyebrow">CTA principal</p>
-            <h2>Probá una demo y descubrí cómo se ve tu rendimiento cuando los datos trabajan a tu favor</h2>
-            <p>Ideal para atletas que quieren entender mejor su evolución y para centros deportivos que necesitan más visibilidad sobre sus procesos de entrenamiento.</p>
+        <div class="divider"></div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Cómo funciona</h2>
+          <p class="muted">Un pipeline claro y replicable: diagnóstico → datos históricos → reportería → suscripción.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div class="step__title">Agendar diagnóstico</div>
+            <div class="step__desc">Nos dejas tu información y coordinamos un levantamiento breve.</div>
           </div>
-          <div class="cta-banner__actions">
-            <a id="footerCta" class="button button--primary" href="mailto:hola@performancelabs.tech?subject=Quiero%20una%20demo%20de%20Performance%20Labs%20para%20atletas">Solicitar demo</a>
-            <a id="feedbackFooterCta" class="button button--ghost" href="https://forms.gle/REEMPLAZAR_CON_TU_LINK" target="_blank" rel="noreferrer">Dejar feedback</a>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div class="step__title">Entrega de datos históricos</div>
+            <div class="step__desc">Recibimos exportaciones (Strava, Garmin, Apple, etc.) o archivos desde tu app.</div>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <div class="step__title">Reportería inicial</div>
+            <div class="step__desc">Primera versión del dashboard + reporte PDF con conclusiones y prioridades.</div>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <div class="step__title">Suscripción de seguimiento</div>
+            <div class="step__desc">Actualizaciones semanales o mensuales, con indicadores y recomendaciones.</div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="footer">
-      <div class="container footer__inner">
+    <section id="planes" class="section section--soft">
+      <div class="container">
+        <div class="section__head">
+          <h2>Planes</h2>
+          <p class="muted">Estructura simple para comenzar. Ajustable según necesidades y volumen.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="price">
+            <div class="price__name">Diagnóstico</div>
+            <div class="price__tag">Punto de partida (atletas y centros)</div>
+            <div class="price__value">$0 <span>evaluación</span></div>
+            <ul class="price__list">
+              <li>Levantamiento y objetivos</li>
+              <li>Revisión de datos disponibles</li>
+              <li>Propuesta de reportería</li>
+            </ul>
+            <a id="btnDiagPlan" class="btn btn--primary btn--block" href="#" rel="noopener">Solicitar diagnóstico</a>
+          </div>
+
+          <div class="price price--featured">
+            <div class="price__name">Suscripción atleta</div>
+            <div class="price__tag">Seguimiento semanal o mensual</div>
+            <div class="price__value">Desde $39.990 <span>/mes</span></div>
+            <ul class="price__list">
+              <li>Dashboard 7D + 28D</li>
+              <li>Reporte PDF premium</li>
+              <li>Conclusiones y próximos pasos</li>
+              <li>Actualización según plan</li>
+            </ul>
+            <a id="btnDiagPlan2" class="btn btn--primary btn--block" href="#" rel="noopener">Solicitar diagnóstico</a>
+          </div>
+
+          <div class="price">
+            <div class="price__name">Suscripción centro</div>
+            <div class="price__tag">Centro deportivo mediano</div>
+            <div class="price__value">Desde $149.990 <span>/mes</span></div>
+            <ul class="price__list">
+              <li>Filtros por atleta y deporte</li>
+              <li>Vistas por coach y grupos</li>
+              <li>Adherencia y retención</li>
+              <li>Reportes periódicos</li>
+            </ul>
+            <a id="btnDiagPlan3" class="btn btn--primary btn--block" href="#" rel="noopener">Solicitar diagnóstico</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Preguntas habituales</h2>
+          <p class="muted">Respuestas cortas, directas y transparentes.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>¿Qué necesito para comenzar?</summary>
+            <div class="faq__body">Solo solicitar el diagnóstico. Luego te indicamos exactamente qué exportar (histórico) y en qué formato.</div>
+          </details>
+          <details>
+            <summary>¿Trabajan con distintos relojes y plataformas?</summary>
+            <div class="faq__body">Sí. Podemos partir con archivos (Excel/CSV) y escalar luego a integraciones según el caso.</div>
+          </details>
+          <details>
+            <summary>¿Cómo se entrega el reporte?</summary>
+            <div class="faq__body">Dashboard y reporte PDF premium, con conclusiones y próximos pasos. La cadencia depende del plan.</div>
+          </details>
+        </div>
+
+        <div class="final">
+          <div class="container final__grid">
+            <div>
+              <h2>¿Agendamos el diagnóstico?</h2>
+              <p class="muted">Es el primer paso para ordenar datos, metas y un plan de reportería útil.</p>
+            </div>
+            <div class="final__cta">
+              <a id="btnDiagBottom" class="btn btn--primary" href="#" rel="noopener">Solicitar diagnóstico</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <img src="./assets/mark.svg" alt="" aria-hidden="true" class="footer__mark" />
         <div>
-          <strong>Performance Labs</strong>
-          <p>Datos, visualización e insights para mejorar el rendimiento deportivo.</p>
-        </div>
-        <div class="footer__links">
-          <a href="#solucion">Solución</a>
-          <a href="#planes">Suscripción</a>
-          <a href="#feedback">Feedback</a>
-          <a href="mailto:hola@performancelabs.tech">hola@performancelabs.tech</a>
+          <div class="footer__brand">Performance Labs</div>
+          <div class="muted">Contacto: <a href="mailto:contacto@performancelabs.tech">contacto@performancelabs.tech</a> • © <span id="year"></span></div>
         </div>
       </div>
-    </footer>
-  </div>
 
-  <script src="app.js"></script>
+      <div class="footer__right">
+        <a id="footerDiag" href="#" rel="noopener">Solicitar diagnóstico</a>
+        <a href="https://github.com/" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
 </body>
 </html>
