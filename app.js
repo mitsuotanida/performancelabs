@@ -1,9 +1,9 @@
-// Performance Labs — Web v5.1
-// (Explicación simple: este archivo decide a qué formulario ir según el segmento: Atleta o Centro.)
+// Performance Labs — Web v5.2
+// Este archivo decide a qué formulario ir según el segmento: Atleta o Centro.
 
 const CONFIG = {
-  diagnosticFormAthleteUrl: "https://forms.gle/EBKLEueVeadbfQs58", // Link del formulario para atletas.
-  diagnosticFormCenterUrl: "https://forms.gle/Sb2u6RuwZ6XTGvu79", // Link del formulario para centros.
+  diagnosticFormAthleteUrl: "https://forms.gle/EBKLEueVeadbfQs58",
+  diagnosticFormCenterUrl: "https://forms.gle/Sb2u6RuwZ6XTGvu79",
   segments: {
     athlete: {
       title: "Atleta",
@@ -47,7 +47,7 @@ const CONFIG = {
     center: {
       title: "Centro deportivo",
       desc: "Gestión por atleta y disciplina: indicadores de adherencia, progreso y consistencia para coaches y dirección.",
-      promise: "Un diagnóstico que ordena datos, segmentación y reportería para operación y retención.",
+      promise: "Actividades: sports business digital, data-driven sport business y sport performance intelligence.",
       bullets: [
         { icon: "👥", title: "Filtros por atleta y deporte", desc: "Selecciona atleta y disciplina para ver estadísticas y tendencias." },
         { icon: "🧾", title: "Reportes por coach", desc: "Entregables periódicos para seguimiento y comunicación." },
@@ -60,18 +60,16 @@ const CONFIG = {
 
 function $(s){ return document.querySelector(s); }
 function $all(s){ return Array.from(document.querySelectorAll(s)); }
-
 const state = { seg: "athlete", sub: "swim" };
 
 function currentDiagUrl(){
   return state.seg === "center" ? CONFIG.diagnosticFormCenterUrl : CONFIG.diagnosticFormAthleteUrl;
-} // Elige el formulario correcto según segmento.
+}
 
-function setDiagLinks(){
-  const url = currentDiagUrl();
-  const ids = ["#btnPrimaryDiag","#btnDiagTop","#btnDiagMid","#btnDiagBottom","#btnDiagPlan","#btnDiagPlan2","#btnDiagPlan3","#footerDiag"];
-  ids.forEach(id => { const el = $(id); if(el) el.href = url; });
-} // Aplica el link a todos los botones.
+function setDiagLink(){
+  const el = $("#btnDiagMid");
+  if(el) el.href = currentDiagUrl();
+}
 
 function renderBullets(list){
   const wrap = $("#segBullets");
@@ -88,7 +86,7 @@ function renderBullets(list){
     `;
     wrap.appendChild(el);
   });
-} // Dibuja viñetas.
+}
 
 function setMock(mock){
   $("#panelTitle").textContent = mock.panelTitle || "Vista previa";
@@ -100,12 +98,12 @@ function setMock(mock){
   const loadValue = (state.seg === "center") ? "1.04" : "1.12";
   $("#mockLoad").textContent = loadValue;
   $("#mockLoadSub").textContent = (parseFloat(loadValue) > 1.3) ? "Alta" : "Controlada";
-} // Actualiza vista previa.
+}
 
 function setSubtabsVisible(v){
   const el = $("#athleteSubtabs");
   if(el) el.style.display = v ? "flex" : "none";
-} // Muestra/oculta subtabs.
+}
 
 function setActiveButtons(){
   $all(".seg__tab").forEach(btn => {
@@ -118,7 +116,7 @@ function setActiveButtons(){
     btn.classList.toggle("is-active", a);
     btn.setAttribute("aria-selected", a ? "true" : "false");
   });
-} // Marca botones activos.
+}
 
 function render(){
   if(state.seg === "athlete"){
@@ -156,24 +154,19 @@ function render(){
     $("#card3Desc").textContent = "Resumen gerencial y reportes por grupo según plan.";
   }
   setActiveButtons();
-  setDiagLinks();
-} // Renderiza y actualiza el link del botón.
+  setDiagLink();
+}
 
 function wire(){
-  $all(".seg__tab").forEach(btn => btn.addEventListener("click", () => {
-    state.seg = btn.dataset.seg;
-    render();
-  }));
-  $all(".subtab").forEach(btn => btn.addEventListener("click", () => {
-    state.sub = btn.dataset.sub;
-    render();
-  }));
-} // Conecta los clicks.
+  $all(".seg__tab").forEach(btn => btn.addEventListener("click", () => { state.seg = btn.dataset.seg; render(); }));
+  $all(".subtab").forEach(btn => btn.addEventListener("click", () => { state.sub = btn.dataset.sub; render(); }));
+}
 
 function init(){
-  $("#year").textContent = String(new Date().getFullYear());
+  const y = document.querySelector("#year");
+  if(y) y.textContent = String(new Date().getFullYear());
   wire();
   render();
-} // Inicializa todo.
+}
 
 init();

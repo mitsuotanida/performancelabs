@@ -20,7 +20,7 @@
   <header class="topbar">
     <div class="container topbar__inner">
       <div class="brand">
-        <img class="brand__mark" src="./assets/mark.svg" alt="" aria-hidden="true" />
+        <img class="brand__mark" src="./assets/logo.svg" onerror="this.onerror=null;this.src='./assets/mark.svg';" alt="Performance Labs" />
         <div class="brand__text">
           <div class="brand__name">Performance Labs</div>
           <div class="brand__tag">Diagnóstico, reportería y seguimiento</div>
@@ -32,7 +32,6 @@
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#planes">Planes</a>
         <a href="#preguntas">Preguntas</a>
-        <a class="pill" id="btnDiagTop" href="#" rel="noopener">Solicitar diagnóstico</a>
       </nav>
     </div>
   </header>
@@ -49,7 +48,7 @@
           </p>
 
           <div class="cta">
-            <a id="btnPrimaryDiag" class="btn btn--primary" href="#" rel="noopener">Solicitar diagnóstico</a>
+            <a class="btn btn--primary" href="#solucion">Solución según contexto</a>
             <a class="btn btn--ghost" href="#como-funciona">Ver cómo funciona</a>
           </div>
         </div>
@@ -82,8 +81,8 @@
               “Conclusión semanal: progreso estable. Próximo foco: técnica con ritmo controlado.”
             </div>
           </div>
+
           <div class="panel__bottom">
-            <span class="muted">Lux Dark • #0B1220</span>
             <span class="pill pill--soft">Accionable</span>
           </div>
         </div>
@@ -94,7 +93,10 @@
       <div class="container">
         <div class="section__head">
           <h2>Solución, según tu contexto</h2>
-          <p class="muted">Entregamos claridad operativa: qué está pasando, por qué y qué hacer a continuación.</p>
+          <p class="muted">
+            Entregamos claridad operativa: qué está pasando, por qué y qué hacer a continuación.
+            Con una experiencia visual sobria, profesional y fácil de usar.
+          </p>
         </div>
 
         <div class="seg">
@@ -161,7 +163,7 @@
       <div class="container">
         <div class="section__head">
           <h2>Cómo funciona</h2>
-          <p class="muted">Un pipeline claro y replicable: diagnóstico → datos históricos → reportería → suscripción.</p>
+          <p class="muted">Agendar diagnóstico → Entrega de datos históricos → Reportería inicial → Suscripción semanal o mensual.</p>
         </div>
 
         <div class="steps">
@@ -193,20 +195,19 @@
       <div class="container">
         <div class="section__head">
           <h2>Planes</h2>
-          <p class="muted">Estructura simple para comenzar. Ajustable según necesidades y volumen.</p>
+          <p class="muted">Diagnóstico sin costo y primer mes gratis en la suscripción.</p>
         </div>
 
         <div class="pricing">
           <div class="price">
             <div class="price__name">Diagnóstico</div>
             <div class="price__tag">Punto de partida (atletas y centros)</div>
-            <div class="price__value">$0 <span>evaluación</span></div>
+            <div class="price__value">$0 <span>costo</span></div>
             <ul class="price__list">
               <li>Levantamiento y objetivos</li>
               <li>Revisión de datos disponibles</li>
               <li>Propuesta de reportería</li>
             </ul>
-            <a id="btnDiagPlan" class="btn btn--primary btn--block" href="#" rel="noopener">Solicitar diagnóstico</a>
           </div>
 
           <div class="price price--featured">
@@ -214,12 +215,11 @@
             <div class="price__tag">Seguimiento semanal o mensual</div>
             <div class="price__value">Desde $39.990 <span>/mes</span></div>
             <ul class="price__list">
+              <li><strong>Primer mes gratis</strong></li>
               <li>Dashboard 7D + 28D</li>
               <li>Reporte PDF premium</li>
               <li>Conclusiones y próximos pasos</li>
-              <li>Actualización según plan</li>
             </ul>
-            <a id="btnDiagPlan2" class="btn btn--primary btn--block" href="#" rel="noopener">Solicitar diagnóstico</a>
           </div>
 
           <div class="price">
@@ -227,12 +227,11 @@
             <div class="price__tag">Centro deportivo mediano</div>
             <div class="price__value">Desde $149.990 <span>/mes</span></div>
             <ul class="price__list">
+              <li><strong>Primer mes gratis</strong></li>
               <li>Filtros por atleta y deporte</li>
               <li>Vistas por coach y grupos</li>
               <li>Adherencia y retención</li>
-              <li>Reportes periódicos</li>
             </ul>
-            <a id="btnDiagPlan3" class="btn btn--primary btn--block" href="#" rel="noopener">Solicitar diagnóstico</a>
           </div>
         </div>
       </div>
@@ -248,7 +247,7 @@
         <div class="faq">
           <details>
             <summary>¿Qué necesito para comenzar?</summary>
-            <div class="faq__body">Solo solicitar el diagnóstico. Luego te indicamos exactamente qué exportar (histórico) y en qué formato.</div>
+            <div class="faq__body">Solo solicitar el diagnóstico. Luego indicamos exactamente qué exportar (histórico) y en qué formato.</div>
           </details>
           <details>
             <summary>¿Trabajan con distintos relojes y plataformas?</summary>
@@ -258,18 +257,6 @@
             <summary>¿Cómo se entrega el reporte?</summary>
             <div class="faq__body">Dashboard y reporte PDF premium, con conclusiones y próximos pasos. La cadencia depende del plan.</div>
           </details>
-        </div>
-
-        <div class="final">
-          <div class="container final__grid">
-            <div>
-              <h2>¿Agendamos el diagnóstico?</h2>
-              <p class="muted">Es el primer paso para ordenar datos, metas y un plan de reportería útil.</p>
-            </div>
-            <div class="final__cta">
-              <a id="btnDiagBottom" class="btn btn--primary" href="#" rel="noopener">Solicitar diagnóstico</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -286,8 +273,16 @@
       </div>
 
       <div class="footer__right">
-        <a id="footerDiag" href="#" rel="noopener">Solicitar diagnóstico</a>
-        <a href="https://github.com/" rel="noopener">GitHub</a>
+        <div class="socials" aria-label="Redes sociales">
+          <a class="social" href="https://www.instagram.com/performancelabs.tech/" target="_blank" rel="noopener">
+            <img src="./assets/instagram.svg" alt="" aria-hidden="true" />
+            Instagram
+          </a>
+          <a class="social" href="https://www.tiktok.com/@performancelabs.tech" target="_blank" rel="noopener">
+            <img src="./assets/tiktok.svg" alt="" aria-hidden="true" />
+            TikTok
+          </a>
+        </div>
       </div>
     </div>
   </footer>

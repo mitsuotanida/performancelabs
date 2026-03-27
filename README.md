@@ -1,17 +1,17 @@
-# Performance Labs — Web v5.1 (lista para despliegue)
+# Performance Labs — Web v5.2 (Ready)
 
-Esta versión ya está configurada con:
-- Formulario Atletas: https://forms.gle/EBKLEueVeadbfQs58
-- Formulario Centros: https://forms.gle/Sb2u6RuwZ6XTGvu79
-- Correo en footer: contacto@performancelabs.tech
+Cambios:
+- Se corrige el logo en el header (assets/logo.svg + fallback).
+- Se elimina “Lux Dark • #0B1220”.
+- Botón hero: “Solución según contexto” (baja a #solucion).
+- Se elimina el CTA de diagnóstico en la barra superior.
+- Footer: se reemplaza GitHub/diagnóstico por Instagram y TikTok.
+- Planes: diagnóstico sin costo + primer mes gratis.
+- Centro (Lo central): sports business digital, data-driven sport business, sport performance intelligence.
 
-## Cómo funciona el botón "Solicitar diagnóstico"
-- Si el usuario está en **Atleta**, el botón abre el formulario de atletas.
-- Si el usuario está en **Centro deportivo**, el botón abre el formulario de centros.
+Formularios:
+- Atletas: https://forms.gle/EBKLEueVeadbfQs58
+- Centros: https://forms.gle/Sb2u6RuwZ6XTGvu79
 
-## Archivos
-- index.html
-- styles.css
-- app.js
-- assets/
-- 404.html (opcional)
+Contacto:
+- contacto@performancelabs.tech
