@@ -1,8 +1,8 @@
 const APP_CONFIG = {
   formUrl: "https://forms.gle/Sb2u6RuwZ6XTGvu79",
   siteName: "Performance Labs",
-  offer: "Diagnóstico inicial sin costo"
-}; // Este objeto guarda la configuración principal del sitio. Sirve para tener en un solo lugar los datos más importantes, facilitar cambios futuros y mantener el código ordenado.
+  primaryOffer: "Diagnóstico inicial sin costo"
+}; // Este objeto centraliza los datos clave del sitio. Sirve para cambiar enlaces y nombres importantes desde un solo lugar.
 
 function setDynamicYear() {
   const yearNode = document.querySelector("[data-year]");
@@ -26,20 +26,22 @@ function enhanceExternalLinks() {
 }
 
 function attachLeadTrackingPlaceholders() {
-  const ctaLinks = document.querySelectorAll('a[href="' + APP_CONFIG.formUrl + '"]');
+  const ctaLinks = document.querySelectorAll(`a[href="${APP_CONFIG.formUrl}"]`);
 
   ctaLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "lead_cta_click",
-        site_name: APP_CONFIG.siteName,
-        offer_name: APP_CONFIG.offer,
-        cta_text: link.textContent.trim()
-      });
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: "lead_cta_click",
+          site_name: APP_CONFIG.siteName,
+          offer_name: APP_CONFIG.primaryOffer,
+          cta_text: link.textContent.trim()
+        });
+      }
+
       console.log("[Lead CTA Click]", {
         site: APP_CONFIG.siteName,
-        offer: APP_CONFIG.offer,
+        offer: APP_CONFIG.primaryOffer,
         text: link.textContent.trim()
       });
     });

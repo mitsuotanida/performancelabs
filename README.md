@@ -1,18 +1,15 @@
-# Performance Labs Landing
+# Performance Labs
 
-Versión de landing enfocada en generación de prospectos y leads para centros deportivos medianos.
+Landing enfocada en centros deportivos medianos.
 
-## Archivos
-- index.html
-- styles.css
-- app.js
-- 404.html
+## Archivos principales
+- `index.html`: contenido y estructura
+- `styles.css`: estilo visual
+- `app.js`: interacciones mínimas y tracking base
+- `404.html`: página de error
 
-## CTA principal
-Diagnóstico inicial sin costo.
-
-## Formulario
-Reemplaza la URL del Google Forms en:
-- index.html
-- app.js
-- 404.html
+## CTA activos
+Solo hay 3 CTA principales en la landing:
+1. Solicitar diagnóstico sin costo
+2. Evaluar mi centro
+3. Agendar una primera conversación
