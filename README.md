@@ -1,17 +1,17 @@
-# Performance Labs — Web v5.2 (Ready)
+# Performance Labs Leadgen Landing
 
-Cambios:
-- Se corrige el logo en el header (assets/logo.svg + fallback).
-- Se elimina “Lux Dark • #0B1220”.
-- Botón hero: “Solución según contexto” (baja a #solucion).
-- Se elimina el CTA de diagnóstico en la barra superior.
-- Footer: se reemplaza GitHub/diagnóstico por Instagram y TikTok.
-- Planes: diagnóstico sin costo + primer mes gratis.
-- Centro (Lo central): sports business digital, data-driven sport business, sport performance intelligence.
+## Archivos incluidos
+- `index.html`: landing principal enfocada en captación de prospectos y leads.
+- `styles.css`: estilos con look Silicon Valley / tech premium.
+- `app.js`: tracking básico de clics en CTA vía `dataLayer`.
+- `thank-you.html`: página de gracias para futura medición de conversiones reales.
+- `404.html`: página de error.
+- `GOOGLE_ADS_SETUP.md`: paso a paso para dejarla lista para Google Ads.
 
-Formularios:
-- Atletas: https://forms.gle/EBKLEueVeadbfQs58
-- Centros: https://forms.gle/Sb2u6RuwZ6XTGvu79
+## Qué editar primero
+1. Cambiar el enlace del formulario en `index.html` y `app.js` si usarás otro Google Form.
+2. Cambiar el correo `contacto@performancelabs.tech` si corresponde.
+3. Reemplazar el contenido del formulario en Google Forms con tus preguntas definitivas.
 
-Contacto:
-- contacto@performancelabs.tech
+## Siguiente recomendación
+Publica esta landing primero. Después configura Google Tag Manager, GA4 y el evento `lead_cta_click` para empezar a medir clics al diagnóstico.
