@@ -2,7 +2,7 @@ const APP_CONFIG = {
   formUrl: "https://forms.gle/Sb2u6RuwZ6XTGvu79",
   siteName: "Performance Labs",
   offer: "Diagnóstico inicial sin costo"
-}; // Este objeto centraliza las configuraciones clave del sitio. Sirve para cambiar rápido el enlace del formulario o el nombre de la oferta sin tocar muchas partes del código.
+}; // Este objeto guarda la configuración principal del sitio. Sirve para tener en un solo lugar los datos más importantes, facilitar cambios futuros y mantener el código ordenado.
 
 function setDynamicYear() {
   const yearNode = document.querySelector("[data-year]");
@@ -25,26 +25,23 @@ function enhanceExternalLinks() {
   });
 }
 
-function pushLeadEvent(location, text) {
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "lead_cta_click",
-    offer_name: APP_CONFIG.offer,
-    cta_location: location,
-    cta_text: text,
-    page_type: "leadgen_landing"
-  });
-}
-
-function attachLeadTracking() {
-  const ctaLinks = document.querySelectorAll(".js-lead-cta");
+function attachLeadTrackingPlaceholders() {
+  const ctaLinks = document.querySelectorAll('a[href="' + APP_CONFIG.formUrl + '"]');
 
   ctaLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      const location = link.dataset.ctaLocation || "unknown";
-      const text = (link.textContent || "").trim();
-      pushLeadEvent(location, text);
-      console.log("[Lead CTA Click]", { location, text });
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "lead_cta_click",
+        site_name: APP_CONFIG.siteName,
+        offer_name: APP_CONFIG.offer,
+        cta_text: link.textContent.trim()
+      });
+      console.log("[Lead CTA Click]", {
+        site: APP_CONFIG.siteName,
+        offer: APP_CONFIG.offer,
+        text: link.textContent.trim()
+      });
     });
   });
 }
@@ -52,7 +49,7 @@ function attachLeadTracking() {
 function initApp() {
   setDynamicYear();
   enhanceExternalLinks();
-  attachLeadTracking();
+  attachLeadTrackingPlaceholders();
 }
 
 document.addEventListener("DOMContentLoaded", initApp);
