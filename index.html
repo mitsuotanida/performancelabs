@@ -4,39 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Performance Labs | Diagnóstico sin costo para centros deportivos</title>
-  <meta name="description" content="Profesionaliza el seguimiento de tus alumnos con reportes claros, indicadores accionables y decisiones basadas en datos. Solicita un diagnóstico inicial sin costo." />
+  <meta
+    name="description"
+    content="Profesionaliza el seguimiento de tus alumnos con reportes claros, indicadores accionables y decisiones basadas en datos. Solicita un diagnóstico inicial sin costo."
+  />
   <meta name="theme-color" content="#0B1220" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <a class="skip" href="#main">Saltar al contenido</a>
-  <header class="topbar">
+
+  <header class="topbar topbar--landing">
     <div class="container topbar__inner">
-      <a href="./index.html" class="brand" aria-label="Ir al inicio">
+      <a href="#" class="brand brand--link" aria-label="Ir al inicio">
         <div class="brand__mark">PL</div>
-        <div>
+        <div class="brand__text">
           <div class="brand__name">Performance Labs</div>
           <div class="brand__tag">Diagnóstico, reportería y seguimiento para centros deportivos</div>
         </div>
       </a>
 
       <nav class="nav" aria-label="Navegación principal">
-        <a href="./index.html" data-page="index.html">Inicio</a>
-        <a href="./quienes-somos.html" data-page="quienes-somos.html">¿Quiénes somos?</a>
-        <a href="./mision-vision.html" data-page="mision-vision.html">Misión y visión</a>
-        <a href="./valores-sellos.html" data-page="valores-sellos.html">Valores y sellos</a>
-        <a class="nav__cta" href="https://forms.gle/Sb2u6RuwZ6XTGvu79" target="_blank">Diagnóstico sin costo</a>
+        <a href="#problema">Problema</a>
+        <a href="#solucion">Solución</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#preguntas">Preguntas</a>
       </nav>
+
+      <a
+        class="btn btn--primary btn--nav"
+        href="https://forms.gle/Sb2u6RuwZ6XTGvu79"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Solicitar diagnóstico sin costo
+      </a>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="container hero__grid">
-        <div>
+    <section class="hero hero--leadgen">
+      <div class="container hero__grid hero__grid--leadgen">
+        <div class="hero__copy">
           <div class="badge">Diagnóstico inicial sin costo</div>
-          <h1>Profesionaliza el seguimiento de tus alumnos con una base más clara para decidir, mejorar la experiencia y fortalecer la propuesta de valor de tu centro.</h1>
-          <p class="lead">Performance Labs ayuda a centros deportivos medianos a transformar información dispersa en reportería clara, indicadores accionables y una base más sólida para el seguimiento, la retención y la mejora continua del servicio.</p>
+
+          <h1>
+            Profesionaliza el seguimiento de tus alumnos con una base más clara para decidir,
+            mejorar la experiencia y fortalecer la propuesta de valor de tu centro.
+          </h1>
+
+          <p class="lead">
+            Performance Labs ayuda a <strong>centros deportivos medianos</strong> a transformar información dispersa
+            en reportería clara, indicadores accionables y una base más sólida para el seguimiento,
+            la retención y la mejora continua del servicio.
+          </p>
 
           <div class="hero-points">
             <div class="hero-point">Seguimiento más profesional por alumno y grupo</div>
@@ -45,23 +66,37 @@
           </div>
 
           <div class="cta">
-            <a class="btn btn--primary btn--large" href="https://forms.gle/Sb2u6RuwZ6XTGvu79" target="_blank">Solicitar diagnóstico sin costo</a>
+            <a
+              class="btn btn--primary btn--large"
+              href="https://forms.gle/Sb2u6RuwZ6XTGvu79"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Solicitar diagnóstico sin costo
+            </a>
           </div>
 
-          <p class="hero__micro">Ideal para centros que ya trabajan con alumnos, grupos, asistencia, planillas o métricas deportivas y quieren ordenar su seguimiento sin complejidad innecesaria.</p>
+          <p class="hero__micro">
+            Ideal para centros que ya trabajan con alumnos, grupos, asistencia,
+            planillas o métricas deportivas y quieren ordenar su seguimiento.
+          </p>
         </div>
 
-        <aside class="hero-lead-box">
+        <aside class="hero-lead-box" aria-label="Propuesta de valor del diagnóstico">
           <div class="lead-box__kicker">Qué te llevas</div>
           <h2>Una primera base objetiva para decidir mejor</h2>
+
           <ul class="lead-box__list">
-            <li>Revisión inicial de los datos disponibles</li>
+            <li>Revisión inicial de tus datos disponibles</li>
             <li>Identificación de focos de riesgo y mejora</li>
             <li>Propuesta de indicadores prioritarios</li>
             <li>Ejemplo de reportería inicial</li>
             <li>Recomendación concreta de siguiente paso</li>
           </ul>
-          <p class="lead-box__note">Sin software complejo. Comenzamos con la información que tu centro ya genera hoy.</p>
+
+          <p class="lead-box__note">
+            Sin software complejo. Comenzamos con la información que tu centro ya genera hoy.
+          </p>
         </aside>
       </div>
     </section>
@@ -76,21 +111,27 @@
       </div>
     </section>
 
-    <section class="section">
+    <section id="problema" class="section">
       <div class="container">
         <div class="section__head">
           <h2>Muchos centros ya generan información. El desafío está en convertirla en seguimiento útil, decisiones oportunas y mejoras visibles.</h2>
-          <p class="muted">Cuando la información vive en planillas, registros sueltos, observaciones técnicas o apps separadas, se vuelve difícil detectar alumnos en riesgo, mostrar avances con claridad y tomar decisiones con respaldo.</p>
+          <p class="muted">
+            Cuando la información vive en planillas, registros sueltos, observaciones técnicas o apps separadas,
+            se vuelve difícil detectar alumnos en riesgo, mostrar avances con claridad y tomar decisiones con respaldo.
+          </p>
         </div>
+
         <div class="pain-grid">
           <article class="pain-card">
             <h3>Seguimiento fragmentado</h3>
             <p>La información existe, pero está dispersa entre asistencia, métricas, observaciones y memoria del coach.</p>
           </article>
+
           <article class="pain-card">
             <h3>Pérdida silenciosa de alumnos</h3>
             <p>Muchas veces el centro detecta tarde las señales de desmotivación, baja constancia o abandono.</p>
           </article>
+
           <article class="pain-card">
             <h3>Poco valor visible</h3>
             <p>Si el alumno no ve seguimiento claro ni evidencia de progreso, percibe menos valor en el servicio.</p>
@@ -99,16 +140,20 @@
       </div>
     </section>
 
-    <section class="section section--soft">
+    <section id="solucion" class="section section--soft">
       <div class="container">
         <div class="section__head">
           <h2>Qué habilita Performance Labs en un centro deportivo</h2>
-          <p class="muted">Ordena tus datos actuales y los transforma en una primera capa de inteligencia de seguimiento para coaches, dirección y gestión del centro.</p>
+          <p class="muted">
+            Ordena tus datos actuales y los transforma en una primera capa de inteligencia de seguimiento
+            para coaches, dirección y gestión del centro.
+          </p>
         </div>
 
         <div class="solution-grid">
           <div class="solution-block">
             <h3>Lo que puedes empezar a ver</h3>
+
             <div class="bullet-list">
               <div class="bullet-item">
                 <div class="bullet-item__icon">01</div>
@@ -117,6 +162,7 @@
                   <div class="bullet-item__desc">Qué grupos y alumnos muestran mejores o peores señales de continuidad.</div>
                 </div>
               </div>
+
               <div class="bullet-item">
                 <div class="bullet-item__icon">02</div>
                 <div>
@@ -124,6 +170,7 @@
                   <div class="bullet-item__desc">Alertas tempranas para actuar antes de perder alumnos silenciosamente.</div>
                 </div>
               </div>
+
               <div class="bullet-item">
                 <div class="bullet-item__icon">03</div>
                 <div>
@@ -136,23 +183,28 @@
 
           <div class="solution-block">
             <h3>Cómo esta solución fortalece la propuesta de valor de tu centro</h3>
+
             <div class="card-grid card-grid--single-column">
               <article class="card">
                 <div class="card__title">Mayor valor percibido</div>
                 <div class="card__desc">Los alumnos perciben más profesionalismo cuando existe seguimiento visible, criterios claros y una lectura comprensible del progreso.</div>
               </article>
+
               <article class="card">
                 <div class="card__title">Mejor comunicación</div>
                 <div class="card__desc">Permite mostrar avances, explicar decisiones y sostener conversaciones con mayor claridad frente a alumnos, apoderados y equipos.</div>
               </article>
+
               <article class="card">
                 <div class="card__title">Más orden operativo</div>
                 <div class="card__desc">Reduce improvisación y dependencia de memoria, planillas aisladas o seguimiento informal.</div>
               </article>
+
               <article class="card">
                 <div class="card__title">Diferenciación real</div>
                 <div class="card__desc">Ayuda al centro a posicionarse con una propuesta más moderna, profesional y basada en evidencia.</div>
               </article>
+
               <article class="card card--accent">
                 <div class="card__title">Experiencias más motivadoras</div>
                 <div class="card__desc">El seguimiento estructurado también puede habilitar estrategias de gamificación, transformando avances, hitos y hábitos en experiencias más visibles y motivadoras para los alumnos.</div>
@@ -161,7 +213,9 @@
           </div>
         </div>
 
-        <div class="value-note">Una primera capa de reportería puede ayudarte a ordenar seguimiento, detectar señales tempranas y comunicar mejor el valor de tu servicio.</div>
+        <div class="value-note">
+          Una primera capa de reportería puede ayudarte a ordenar seguimiento, detectar señales tempranas y comunicar mejor el valor de tu servicio.
+        </div>
       </div>
     </section>
 
@@ -169,73 +223,131 @@
       <div class="container">
         <div class="section__head">
           <h2>Centros para los que esta solución suele tener mejor ajuste</h2>
-          <p class="muted">Si te reconoces en estas señales, esta solución probablemente te calce bien.</p>
+          <p class="muted">
+            Si te reconoces en estas señales, esta propuesta probablemente calce bien con tu etapa actual.
+          </p>
         </div>
+
         <div class="fit-grid">
-          <article class="fit-card">Trabajan con alumnos o grupos de entrenamiento de forma recurrente</article>
-          <article class="fit-card">Tienen asistencia, planillas o métricas, pero todavía no una lectura integrada</article>
-          <article class="fit-card">Buscan profesionalizar el seguimiento sin partir con una plataforma pesada</article>
-          <article class="fit-card">Quieren más retención, mejor comunicación y mayor valor percibido</article>
-          <article class="fit-card">Tienen uno o más coaches y necesitan mayor consistencia en el seguimiento</article>
-          <article class="fit-card">Quieren ver oportunidades concretas antes de invertir en algo más grande</article>
+          <article class="fit-card">Trabajas con alumnos o grupos de entrenamiento de forma recurrente</article>
+          <article class="fit-card">Tienes asistencia, planillas o métricas, pero no una lectura integrada</article>
+          <article class="fit-card">Quieres profesionalizar el seguimiento sin partir con una plataforma pesada</article>
+          <article class="fit-card">Buscas más retención, mejor comunicación y más valor percibido</article>
+          <article class="fit-card">Tienes uno o más coaches y quieres mayor consistencia en el seguimiento</article>
+          <article class="fit-card">Quieres ver oportunidades concretas antes de invertir en algo más grande</article>
         </div>
+
+        <p class="section-note">
+          Si tu centro está en una etapa de crecimiento, esta solución puede ayudarte a construir una base más profesional de seguimiento sin complejidad innecesaria.
+        </p>
       </div>
     </section>
 
-    <section class="section section--soft">
+    <section id="como-funciona" class="section section--soft">
       <div class="container">
         <div class="section__head">
           <h2>Cómo funciona</h2>
-          <p class="muted">Un proceso simple para generar valor rápido y sin fricción innecesaria.</p>
+          <p class="muted">
+            Un proceso simple para generar valor rápido y sin fricción innecesaria.
+          </p>
         </div>
+
         <div class="steps">
-          <article class="step"><div class="step__num">1</div><div class="step__title">Dejas tus datos</div><div class="step__desc">Nos compartes información básica de tu centro y el principal problema que hoy quieres resolver.</div></article>
-          <article class="step"><div class="step__num">2</div><div class="step__title">Revisamos tu contexto</div><div class="step__desc">Entendemos tu operación, los datos disponibles y el nivel de madurez actual.</div></article>
-          <article class="step"><div class="step__num">3</div><div class="step__title">Recibes una primera lectura</div><div class="step__desc">Te mostramos oportunidades de seguimiento, indicadores y focos de mejora.</div></article>
-          <article class="step"><div class="step__num">4</div><div class="step__title">Evaluamos el siguiente paso</div><div class="step__desc">Si hace sentido, avanzamos a reportería y seguimiento periódico.</div></article>
+          <article class="step">
+            <div class="step__num">1</div>
+            <div class="step__title">Dejas tus datos</div>
+            <div class="step__desc">Nos compartes información básica de tu centro y el principal problema que hoy quieres resolver.</div>
+          </article>
+
+          <article class="step">
+            <div class="step__num">2</div>
+            <div class="step__title">Revisamos tu contexto</div>
+            <div class="step__desc">Entendemos tu operación, los datos disponibles y el nivel de madurez actual.</div>
+          </article>
+
+          <article class="step">
+            <div class="step__num">3</div>
+            <div class="step__title">Recibes una primera lectura</div>
+            <div class="step__desc">Te mostramos oportunidades de seguimiento, indicadores y focos de mejora.</div>
+          </article>
+
+          <article class="step">
+            <div class="step__num">4</div>
+            <div class="step__title">Evaluamos el siguiente paso</div>
+            <div class="step__desc">Si hace sentido, avanzamos a reportería y seguimiento periódico.</div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container diagnostic-grid">
-        <div>
-          <div class="section__head">
-            <h2>Qué incluye el diagnóstico inicial</h2>
-            <p class="muted">La entrada está diseñada para ser clara, útil y realista desde el primer contacto.</p>
-          </div>
-          <div class="diagnostic-list">
-            <div class="diagnostic-item">Levantamiento del contexto del centro</div>
-            <div class="diagnostic-item">Revisión de datos disponibles</div>
-            <div class="diagnostic-item">Propuesta de indicadores prioritarios</div>
-            <div class="diagnostic-item">Detección de focos de riesgo y mejora</div>
-            <div class="diagnostic-item">Ejemplo de reportería o dashboard</div>
-            <div class="diagnostic-item">Recomendación de siguiente paso</div>
-          </div>
-        </div>
-        <div class="cta-box">
+    <section id="diagnostico" class="section section--diagnostic-cta">
+      <div class="container diagnostic-hero">
+        <div class="diagnostic-hero__copy">
           <div class="diagnostic-box__kicker">Oferta de entrada</div>
-          <h2>Evalúa tu centro sin costo inicial</h2>
-          <p class="lead" style="margin-top:14px;">Una primera lectura puede mostrarte dónde hay oportunidades de seguimiento, retención, valor percibido y profesionalización del servicio.</p>
-          <div class="cta">
-            <a class="btn btn--primary btn--large btn--full" href="https://forms.gle/Sb2u6RuwZ6XTGvu79" target="_blank">Evaluar mi centro</a>
+          <h2>Solicita una evaluación inicial de tu centro</h2>
+          <p class="muted">
+            Te ayudamos a identificar qué información ya tiene tu centro, qué señales vale la pena seguir
+            y cómo podrías empezar a profesionalizar el seguimiento con una primera base objetiva.
+          </p>
+
+          <div class="diagnostic-list diagnostic-list--compact">
+            <div class="diagnostic-item">Sin costo inicial</div>
+            <div class="diagnostic-item">Sin software complejo</div>
+            <div class="diagnostic-item">Sin necesidad de tener todo ordenado</div>
           </div>
+        </div>
+
+        <div class="diagnostic-hero__cta">
+          <a
+            class="btn btn--primary btn--large btn--full"
+            href="https://forms.gle/Sb2u6RuwZ6XTGvu79"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Evaluar mi centro
+          </a>
+
+          <p class="lead-box__note lead-box__note--center">
+            Completa el formulario y te contactaremos para revisar si esta solución tiene buen ajuste con tu operación actual.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="section section--soft">
+    <section id="preguntas" class="section">
       <div class="container">
         <div class="section__head">
           <h2>Preguntas frecuentes</h2>
-          <p class="muted">Lo justo y necesario para despejar dudas antes de dejar tus datos.</p>
+          <p class="muted">
+            Lo justo y necesario para despejar dudas antes de dejar tus datos.
+          </p>
         </div>
+
         <div class="faq">
-          <details><summary>¿Necesitamos tener todo ordenado para empezar?</summary><div class="faq__body">No. Podemos partir con planillas, asistencia, métricas y registros simples.</div></details>
-          <details><summary>¿Esto reemplaza el criterio del coach?</summary><div class="faq__body">No. Lo complementa con mayor claridad, estructura y respaldo para decidir mejor.</div></details>
-          <details><summary>¿Sirve para centros medianos?</summary><div class="faq__body">Sí. Está pensado especialmente para centros que están creciendo y necesitan más estructura.</div></details>
-          <details><summary>¿Qué recibimos con el diagnóstico?</summary><div class="faq__body">Una primera lectura de tus datos, focos de mejora, indicadores prioritarios y una recomendación concreta de siguiente paso.</div></details>
-          <details><summary>¿Qué pasa después del formulario?</summary><div class="faq__body">Revisamos la información enviada y te contactamos para evaluar el ajuste y los próximos pasos.</div></details>
+          <details>
+            <summary>¿Necesitamos tener todo ordenado para empezar?</summary>
+            <div class="faq__body">No. Podemos partir con planillas, asistencia, métricas y registros simples.</div>
+          </details>
+
+          <details>
+            <summary>¿Esto reemplaza el criterio del coach?</summary>
+            <div class="faq__body">No. Lo complementa con mayor claridad, estructura y respaldo para decidir mejor.</div>
+          </details>
+
+          <details>
+            <summary>¿Sirve para centros medianos?</summary>
+            <div class="faq__body">Sí. De hecho, está pensado especialmente para centros que están creciendo y necesitan más estructura.</div>
+          </details>
+
+          <details>
+            <summary>¿Qué recibimos con la evaluación inicial?</summary>
+            <div class="faq__body">Una primera lectura de tus datos, focos de mejora, indicadores prioritarios y una recomendación concreta de siguiente paso.</div>
+          </details>
+
+          <details>
+            <summary>¿Qué pasa después del formulario?</summary>
+            <div class="faq__body">Revisamos la información enviada y te contactamos para evaluar el ajuste y los próximos pasos.</div>
+          </details>
         </div>
       </div>
     </section>
@@ -244,10 +356,20 @@
       <div class="container final__grid">
         <div>
           <h2>Una mejor estructura de seguimiento permite detectar antes, comunicar mejor y sostener mayor valor en el tiempo.</h2>
-          <p class="muted">No necesitas esperar a tener una infraestructura perfecta para empezar a tomar mejores decisiones.</p>
+          <p class="muted">
+            No necesitas esperar a tener una infraestructura perfecta para empezar a tomar mejores decisiones.
+          </p>
         </div>
+
         <div class="final__cta">
-          <a class="btn btn--primary" href="https://forms.gle/Sb2u6RuwZ6XTGvu79" target="_blank">Agendar una primera conversación</a>
+          <a
+            class="btn btn--primary"
+            href="https://forms.gle/Sb2u6RuwZ6XTGvu79"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar una primera conversación
+          </a>
         </div>
       </div>
     </section>
@@ -262,14 +384,16 @@
           <div class="muted muted--small">Diagnóstico, reportería y seguimiento para centros deportivos</div>
         </div>
       </div>
+
       <div class="footer__right">
-        <a href="./index.html">Inicio</a>
-        <a href="./quienes-somos.html">¿Quiénes somos?</a>
-        <a href="./mision-vision.html">Misión y visión</a>
-        <a href="./valores-sellos.html">Valores y sellos</a>
+        <a href="#problema">Problema</a>
+        <a href="#solucion">Solución</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="mailto:contacto@performancelabs.tech">contacto@performancelabs.tech</a>
       </div>
     </div>
   </footer>
+
   <script src="./app.js"></script>
 </body>
 </html>
