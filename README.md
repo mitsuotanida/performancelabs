@@ -1,15 +1,14 @@
-# Performance Labs
+# Performance Labs MVP
 
-Landing enfocada en centros deportivos medianos.
+Sitio estático listo para GitHub Pages.
 
-## Archivos principales
-- `index.html`: contenido y estructura
-- `styles.css`: estilo visual
-- `app.js`: interacciones mínimas y tracking base
-- `404.html`: página de error
+## Páginas incluidas
+- `index.html` — Inicio / landing principal
+- `quienes-somos.html` — ¿Quiénes somos?
+- `mision-vision.html` — Misión y visión
+- `valores-sellos.html` — Valores y sellos
+- `404.html`
 
-## CTA activos
-Solo hay 3 CTA principales en la landing:
-1. Solicitar diagnóstico sin costo
-2. Evaluar mi centro
-3. Agendar una primera conversación
+## Personalizaciones rápidas
+- Cambiar URL del formulario en `index.html`, páginas internas y `app.js`
+- Ajustar estilos globales en `styles.css`
